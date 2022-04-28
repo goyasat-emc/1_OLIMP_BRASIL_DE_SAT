@@ -1,5 +1,4 @@
 #include <ArduinoJson.h>
-#include <AsyncWebSocket.h>
 #include "PION_System.h"
 #include "PION_Network.h"
 #include <HTTPClient.h>
@@ -268,8 +267,6 @@ void appendFile(fs::FS &fs, const char * path, TickType_t time) {
 }
 
 void sendDataWs() {
-
-  AsyncWebSocket ws("/ws");
   
   // Faz a alocação de 512 Bytes para o JSON
   DynamicJsonDocument jsonBuffer(512);
