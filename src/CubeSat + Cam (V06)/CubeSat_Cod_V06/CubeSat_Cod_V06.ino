@@ -107,16 +107,15 @@ void loop() {
 
       // Liberação de recurso
       http.end();
+      
+      // Gravação no cartão SD
+      cubeSat.logOnSDFile();
     }
     else {
       Serial.println("WiFi desconectado");
     }
     lastTime = millis();
   }
-
-  // Gravação no cartão SD
-  cubeSat.logOnSDFile();
-  delay(timerDelay_SD);
 
 }
 
