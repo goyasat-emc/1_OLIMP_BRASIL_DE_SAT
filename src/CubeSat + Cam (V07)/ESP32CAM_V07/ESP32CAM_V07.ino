@@ -15,7 +15,7 @@ extern uint8_t take;
 unsigned long lastTime = 0;
 // Cada foto deve ser tirada em um intervalo específico
 // 4 minutos = 240000ms
-unsigned long timerDelay = 240000;
+unsigned long timerDelay = 15000;
 
 // define the number of bytes you want to access
 #define EEPROM_SIZE 1
@@ -57,7 +57,9 @@ void setup() {
   initCamera();
 
   Serial.println("Iniciando ESP-NOW");
-  void initEspNow();
+  initEspNow();
+
+  Serial.println("Setup terminado");
 }
 
 void initCamera() {
@@ -119,6 +121,7 @@ void initCamera() {
 
 void takePhoto() {
   // Take Picture with Camera
+  Serial.println("Início de captura");
   fb = esp_camera_fb_get();
   if (!fb) {
     Serial.println("Camera capture failed");
