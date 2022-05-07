@@ -57,7 +57,7 @@ void setup() {
   initCamera();
 
   Serial.println("Iniciando ESP-NOW");
-  void initEspNow();
+  initEspNow();
 }
 
 void initCamera() {
