@@ -35,8 +35,8 @@ DallasTemperature sensorTemp(&oneWire); /*encaminha referências OneWire para o 
 //const char* net_password = "OBSatZenith1000";
 //const char* serverName = "http://192.168.0.1/";
 
-const char* ssid = "Menegon_2GHz";
-const char* net_password = "mejv1413";
+const char* ssid = "";
+const char* net_password = "";
 
 // const char* serverName = "https://httpbin.org/post";
 const char* serverName = "https://obsat.org.br/teste_post/enviophp";
@@ -47,8 +47,6 @@ unsigned long lastTime = 0;
 // Cada mensagem deve ser enviada em um intervalo de 4 minutos
 // 4 minutos = 240000ms
 unsigned long timerDelay = 240000;
-
-unsigned long timerDelay_SD = 240000; // Intervalo de gravação de dados no cartão micro SD
 
 void setup() {
   // Inicializa seu CubeSat, e seus periféricos
