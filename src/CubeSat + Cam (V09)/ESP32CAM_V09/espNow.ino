@@ -99,7 +99,7 @@ void initEspNow() {
   
   // Registro do peer
   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
-  peerInfo.channel = 1;  
+  peerInfo.channel = 0;  
   peerInfo.encrypt = false;
   
   // Adição do peer          
